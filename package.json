@@ -3,26 +3,22 @@
   "version": "1.0.0",
   "description": "Typescript Starter with the bare essentials needed for a Gatsby site",
   "scripts": {
-    "build": "rimraf public && npm run format && npm run lint && npm run type-check && gatsby build",
-    "check-format": "prettier --list-different \"src/**/*.{ts,tsx,css,html,json,md}\" ",
-    "create-types-for-css-modules": "tcm src -c",
-    "create-types-for-sass-modules": "tsm src --nameFormat camel",
-    "css-watch": "tcm src -c --watch",
+    "build": "gatsby build",
     "develop": "gatsby develop",
-    "eslint-init": "eslint --init",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css,html,json,md}\" ",
-    "lint": "eslint ./ --ext .js,.ts,.tsx,.jsx --format visualstudio --no-color --max-warnings 10 --report-unused-disable-directives --ignore-pattern 'public/*' --ignore-pattern 'coverage/*' --ignore-pattern 'node_modules/*' ",
-    "sass-watch": "tsm src --nameFormat camel --watch",
-    "serve": "gatsby serve",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "tsc-init": "tsc --init",
-    "type-check": "tsc"
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@emotion/react": "11.1.4",
+    "@emotion/styled": "11.0.0",
+    "@reduxjs/toolkit": "1.5.0",
     "@types/react-helmet": "6.1.0",
     "@types/react-redux": "7.1.15",
     "@types/styled-components": "5.1.7",
+    "autoprefixer": "10.2.1",
     "gatsby": "2.30.1",
     "gatsby-image": "2.9.0",
     "gatsby-plugin-manifest": "2.10.0",
@@ -44,7 +40,8 @@
     "react-helmet": "6.1.0",
     "react-redux": "7.2.2",
     "styled-components": "5.2.1",
-    "tailwind.macro": "0.5.10"
+    "tailwindcss": "2.0.2",
+    "twin.macro": "2.0.8"
   },
   "devDependencies": {
     "@types/node": "12.7.4",
@@ -54,6 +51,7 @@
     "@typescript-eslint/eslint-plugin": "2.2.0",
     "@typescript-eslint/parser": "2.2.0",
     "axios": "0.21.1",
+    "babel-plugin-macros": "3.0.1",
     "babel-plugin-styled-components": "1.12.0",
     "eslint": "6.3.0",
     "eslint-config-prettier": "6.2.0",
@@ -63,7 +61,7 @@
     "rimraf": "3.0.0",
     "stylelint": "13.8.0",
     "stylelint-config-recommended": "2.2.0",
-    "tailwindcss": "2.0.2",
+    "tailwind.macro": "0.5.10",
     "typed-css-modules": "0.6.5",
     "typed-scss-modules": "3.4.1",
     "typescript": "3.6.2"

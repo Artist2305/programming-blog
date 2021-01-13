@@ -1,7 +1,13 @@
 const path = require(`path`)
 
 module.exports = {
+  siteMetadata: {
+    title: `Code Artist`,
+    description: `Programming Blog`,
+    author: `Mateusz Szostek`
+  },
   plugins: [
+
     // You can have multiple instances of this plugin
     // to read source nodes from different locations on your
     // filesystem.
@@ -28,6 +34,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-tailwindcss`,
+    `tailwind.macro`,
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -83,7 +90,7 @@ module.exports = {
       options: {
         printRejected: true, // Print removed selectors and processed file names
         develop: true, // Enable while using `gatsby develop`
-        tailwind: true, // Enable tailwindcss support
+        tailwind: false, // Enable tailwindcss support
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders

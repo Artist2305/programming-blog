@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import tw from 'twin.macro'
+import Layout from '../components/Layout';
 import ContentCard from '../components/ContentCard';
 
 export const ContentContainer = tw.section`grid grid-cols-4 gap-x-2 gap-y-2 mt-8 mb-8`;
 
-const Home: React.FC = ({ children }) => {
+const Tutorials: React.FC = ({ children }) => {
 
   interface TestData {
     id: number,
@@ -75,4 +75,4 @@ const Home: React.FC = ({ children }) => {
   )
 }
 
-export default Home;
+export default Tutorials;
