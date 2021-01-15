@@ -6,14 +6,16 @@ import "../../css/styles.css";
 import * as Theme from './../../assets/styles/theme';
 import {
   LayoutWrapper, MainWrapper, NavContainer,
-  ContentWrapper, PaginationWrapper,
-  PaginationButton, Footer, FooterTite,
-  FooterLink, RowWrapper, Divider, Copyright
+  ContentWrapper, Footer, FooterTite,
+  FooterLink, RowWrapper, Divider, Copyright,
+  SettingsBar, MobileItems, MobileBtnImg,
+  DesktopBar, SocialWrapper
 } from './styles';
 
-import { useSelector } from 'react-redux';
-import { uiSelector } from '../../state/ui';
+import { useSelector, useDispatch } from 'react-redux';
+import { uiSelector, toogleThemeMode } from '../../state/ui';
 import store from '../../state/store';
+import { toogleBtnIcon, mobileBtnSelector, switchOffMenu } from '../../state/mobileBtn';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
@@ -22,6 +24,27 @@ import SearchBox from '../SearchBox';
 import SectionTitle from '../SectionTitle';
 
 const Layout: React.FC = ({ children }) => {
+
+  const { themeMode } = useSelector(uiSelector);
+  const { btnIcon } = useSelector(mobileBtnSelector);
+
+  let funcRun = false;
+
+  const handleResize = () => {
+    if (store.getState().mobileBtn.btnIcon === "open") {
+      if (funcRun == false) {
+        dispatch(switchOffMenu());
+        funcRun = true;
+        setTimeout(() => funcRun = false, 1000)
+      }
+      console.log(store.getState().mobileBtn.btnIcon);
+    }
+  }
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,6 +54,8 @@ const Layout: React.FC = ({ children }) => {
       }
     }
   `);
+
+  const dispatch = useDispatch();
 
   interface TestArticles {
     id: number;
@@ -58,28 +83,39 @@ const Layout: React.FC = ({ children }) => {
   ]
   let testArticlelinks = testDataArticleLink.map(s => <FooterLink key={s.id} to={s.slug}>{s.title}</FooterLink>);
   let footerLinks = footerDatalinks.map(s => <FooterLink key={s.id} to={s.slug}>{s.title}</FooterLink>);
-  const { themeMode } = useSelector(uiSelector);
 
   return (
     <ThemeProvider theme={Theme[themeMode]}>
       <GlobalStyles />
       <MainWrapper>
         <LayoutWrapper>
-          <NavContainer >
+          <NavContainer id="menu" btnIcon={btnIcon} >
             <Header siteTitle={data.site.siteMetadata.title} />
-            <NavBar />
+            <DesktopBar>
+              <NavBar />
+            </DesktopBar>
+            <SettingsBar>
+              <SearchBox />
+              <SocialWrapper btnIcon={btnIcon} >
+                <MobileBtnImg icon={'plug'}>
+                </MobileBtnImg>
+              </SocialWrapper>
+              <SocialWrapper>
+                <MobileBtnImg icon={'moon'} onClick={() => {
+                  dispatch(toogleThemeMode());
+                  console.log("sfsfsdfs");
+                }}>
+                </MobileBtnImg>
+              </SocialWrapper>
+              <MobileItems onClick={() => { dispatch(toogleBtnIcon()); }}>
+                <MobileBtnImg icon={btnIcon === 'open' ? 'times' : 'bars'}>
+                </MobileBtnImg>
+              </MobileItems>
+            </SettingsBar>
           </NavContainer>
           <SectionTitle title={store.getState().title.pageTitle} />
-          <SearchBox />
           <ContentWrapper>
             {children}
-            <PaginationWrapper>
-              <PaginationButton>1</PaginationButton>
-              <PaginationButton>2</PaginationButton>
-              <PaginationButton>3</PaginationButton>
-              <PaginationButton>4</PaginationButton>
-              <PaginationButton>5</PaginationButton>
-            </PaginationWrapper>
           </ContentWrapper>
           <Footer>
             <FooterTite>Top Topics</FooterTite>

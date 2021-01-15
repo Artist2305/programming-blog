@@ -2,6 +2,9 @@ import React from 'react';
 import { NavBarWrapper } from './styles';
 import NavItem from '../NavItem';
 
+import { useSelector } from 'react-redux';
+import { mobileBtnSelector } from '../../state/mobileBtn';
+
 const NavBar: React.FC = ({ }) => {
 
   interface LinkItem {
@@ -36,12 +39,6 @@ const NavBar: React.FC = ({ }) => {
       action: 'ARTICLES'
     },
     {
-      id: 5,
-      title: 'Newsteller',
-      slug: '/newsteller',
-      action: 'NEWSTELLER'
-    },
-    {
       id: 6,
       title: 'Contact',
       slug: '/contact',
@@ -49,8 +46,11 @@ const NavBar: React.FC = ({ }) => {
     }
   ]
   let navLinks = links.map(s => <NavItem key={s.id} title={s.title} slug={s.slug} action={s.action} />);
+
+  const { btnIcon } = useSelector(mobileBtnSelector);
+
   return (
-    <NavBarWrapper>
+    <NavBarWrapper btnIcon={btnIcon} >
       {navLinks}
     </NavBarWrapper>
   )

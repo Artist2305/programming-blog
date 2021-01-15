@@ -3,10 +3,12 @@ import { ThunkAction } from 'redux-thunk';
 
 import uiReducer from './ui';
 import titleReducer from './title';
+import mobileBtnReducer from './mobileBtn';
 
 const rootReducer = combineReducers({
   ui: uiReducer,
-  title: titleReducer
+  title: titleReducer,
+  mobileBtn: mobileBtnReducer
 });
 
 const store = configureStore({

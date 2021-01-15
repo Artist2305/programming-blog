@@ -3,6 +3,7 @@ import { NavLink } from './styles';
 
 import { useDispatch } from 'react-redux';
 import { changePageTitle } from '../../state/title';
+import { switchOffMenu } from '../../state/mobileBtn';
 
 interface Props {
   title: string,
@@ -17,6 +18,7 @@ const NavItem: React.FC<Props> = ({ title, slug, action }) => {
   return (
     <NavLink to={slug} onClick={() => {
       dispatch(changePageTitle(action));
+      dispatch(switchOffMenu());
     }}>{title}</NavLink>
   )
 }

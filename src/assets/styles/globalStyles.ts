@@ -17,4 +17,7 @@ export default createGlobalStyle<{ theme: ThemeType }>`
     color: ${({ theme }) => theme.colors.primary};
     font-size: 1rem;
   }
+  #menu {
+    background-color: ${({ theme }) => theme.colors.secondary};
+  }
 `

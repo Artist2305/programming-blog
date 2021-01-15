@@ -17,9 +17,9 @@ const ContentCard: React.FC<Props> = ({ image, tags, title, desc, date }) => {
         <Tags>{tags}</Tags>
         <Title>{title}</Title>
         <Description>{desc}</Description>
-        <Date>{date}</Date>
-        <CardButton>READ MORE</CardButton>
       </DescWrapper>
+      <Date>{date}</Date>
+      <CardButton>READ MORE</CardButton>
     </CardWrapper>
   )
 }
