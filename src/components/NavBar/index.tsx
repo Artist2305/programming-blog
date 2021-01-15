@@ -3,7 +3,7 @@ import { NavBarWrapper } from './styles';
 import NavItem from '../NavItem';
 
 import { useSelector } from 'react-redux';
-import { mobileBtnSelector } from '../../state/mobileBtn';
+import { mobileBtnSelector } from '../../state/menuState';
 
 const NavBar: React.FC = ({ }) => {
 
@@ -47,10 +47,10 @@ const NavBar: React.FC = ({ }) => {
   ]
   let navLinks = links.map(s => <NavItem key={s.id} title={s.title} slug={s.slug} action={s.action} />);
 
-  const { btnIcon } = useSelector(mobileBtnSelector);
+  const { menuState } = useSelector(mobileBtnSelector);
 
   return (
-    <NavBarWrapper btnIcon={btnIcon} >
+    <NavBarWrapper menuState={menuState} >
       {navLinks}
     </NavBarWrapper>
   )

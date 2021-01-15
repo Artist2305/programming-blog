@@ -7,14 +7,6 @@ module.exports = {
     author: `Mateusz Szostek`
   },
   plugins: [
-
-    // You can have multiple instances of this plugin
-    // to read source nodes from different locations on your
-    // filesystem.
-    //
-    // The following sets up the Jekyll pattern of having a
-    // "pages" directory for Markdown files and a "data" directory
-    // for `.json`, `.yaml`, `.csv`.
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -79,12 +71,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-
-    //`gatsby-plugin-stylus`,
-    //`gatsby-plugin-sass`,
-    //`gatsby-plugin-less`,
     `gatsby-plugin-postcss`,
-    // Add after these plugins if used
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

@@ -3,7 +3,7 @@ import { NavLink } from './styles';
 
 import { useDispatch } from 'react-redux';
 import { changePageTitle } from '../../state/title';
-import { switchOffMenu } from '../../state/mobileBtn';
+import { switchOffMenu } from '../../state/menuState';
 
 interface Props {
   title: string,

@@ -15,8 +15,8 @@ export const light: Theme = {
 }
 export const dark: Theme = {
   colors: {
-    primary: Colors.darkGray,
-    secondary: Colors.lightGray
+    primary: Colors.lightGray,
+    secondary: Colors.darkGray
   }
 }
 

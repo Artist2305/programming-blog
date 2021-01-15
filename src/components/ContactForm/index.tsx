@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header';
 import {
   ContactWrapper, FormWrapper, FormDescription, FormCol,
   Label, Input, MessageInput, DetHeader, Details, Button, DetailsCol,

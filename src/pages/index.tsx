@@ -3,15 +3,10 @@ import Layout from '../components/Layout';
 import tw from 'twin.macro'
 import ContentCard from '../components/ContentCard';
 
-export const ContentContainer = tw.section`grid 
-sm:grid-cols-1 
-md:grid-cols-2
-lg:grid-cols-3
-xl:grid-cols-4 gap-x-2 gap-y-2 mt-2 mb-8`;
-
-export const PaginationButton = tw.button`w-10 h-10 shadow-md m-1 text-gray-700 outline-none duration-200
-hover:(cursor-pointer bg-gray-300)
-`;
+export const ContentContainer = tw.section`grid sm:grid-cols-1 md:grid-cols-2 
+lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-2 mt-2 mb-8`;
+export const PaginationButton = tw.button`w-10 h-10 shadow-md m-1 outline-none duration-200
+hover:(cursor-pointer bg-gray-300)`;
 export const PaginationWrapper = tw.div`flex flex-row justify-center mb-10`;
 
 const Home: React.FC = ({ children }) => {

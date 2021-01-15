@@ -2,50 +2,50 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import store from '../store';
 import { RootState, Thunk, Dispatch } from '../store';
 
-export enum BtnIcon {
+export enum MenuState {
   OPEN = "open",
   CLOSE = "close"
 }
 
 
 interface BtnState {
-  btnIcon: BtnIcon;
+  menuState: MenuState;
 }
 
 const initialState: BtnState = {
-  btnIcon: BtnIcon.CLOSE
+  menuState: MenuState.CLOSE
 }
 
 //Slice
-const mobileBtnSlice = createSlice({
-  name: 'mobileBtn',
+const menuStateSlice = createSlice({
+  name: 'menuState',
   initialState,
   reducers: {
-    setBtnIcon: (state, action: PayloadAction<BtnIcon>) => {
+    setBtnIcon: (state, action: PayloadAction<MenuState>) => {
       const { payload } = action;
-      state.btnIcon = payload;
+      state.menuState = payload;
     }
   }
 });
 
 //Reducers
-export default mobileBtnSlice.reducer;
+export default menuStateSlice.reducer;
 
 //Selectors 
-export const mobileBtnSelector = (state: RootState) => state.mobileBtn;
+export const mobileBtnSelector = (state: RootState) => state.menu;
 
 //Actions
-const { setBtnIcon } = mobileBtnSlice.actions;
+const { setBtnIcon } = menuStateSlice.actions;
 
 // Thunks
 export const toogleBtnIcon = (): Thunk => (dispatch: Dispatch) => {
-  const { btnIcon } = store.getState().mobileBtn;
-  const icon = btnIcon === BtnIcon.OPEN ? BtnIcon.CLOSE : BtnIcon.OPEN;
+  const { menuState } = store.getState().menu;
+  const icon = menuState === MenuState.OPEN ? MenuState.CLOSE : MenuState.OPEN;
 
   dispatch(setBtnIcon(icon));
 }
 export const switchOffMenu = (): Thunk => (dispatch: Dispatch) => {
-  const icon = BtnIcon.CLOSE;
+  const icon = MenuState.CLOSE;
   console.log(icon);
   dispatch(setBtnIcon(icon));
 }

@@ -1,7 +1,7 @@
 {
-  "name": "starter-template",
+  "name": "core-artist-programming-blog",
   "version": "1.0.0",
-  "description": "Typescript Starter with the bare essentials needed for a Gatsby site",
+  "description": "Blog about programming.",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -72,7 +72,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Artist2305/programming-blog"
   },
   "author": "Mateusz Szostek",
   "license": "",

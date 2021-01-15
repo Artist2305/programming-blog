@@ -1,16 +1,16 @@
 import React from 'react';
 import { SearchInput, SearchContainer, SearchImage, SearchWrapper } from './styles';
 import { useSelector } from 'react-redux';
-import { mobileBtnSelector } from '../../state/mobileBtn';
+import { mobileBtnSelector } from '../../state/menuState';
 import Icon from '../../utils/Icon';
 
 const SearchBox: React.FC = () => {
-  const { btnIcon } = useSelector(mobileBtnSelector);
+  const { menuState } = useSelector(mobileBtnSelector);
   return (
     <React.Fragment>
       <SearchContainer>
         <SearchWrapper>
-          <SearchInput btnIcon={btnIcon} />
+          <SearchInput menuState={menuState} />
           <SearchImage>
             <Icon icon={'search'} />
           </SearchImage>
