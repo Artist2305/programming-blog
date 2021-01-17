@@ -2,6 +2,7 @@ import React from 'react';
 import tw from 'twin.macro'
 import Layout from '../components/Layout';
 import ContentCard from '../components/ContentCard';
+import Head from '../components/Head';
 
 export const ContentContainer = tw.section`grid grid-cols-4 gap-x-2 gap-y-2 mt-8 mb-8`;
 
@@ -67,6 +68,7 @@ const Articles: React.FC = ({ children }) => {
 
   return (
     <Layout>
+      <Head title="Articles" />
       <ContentContainer>
         {testCards}
         {children}

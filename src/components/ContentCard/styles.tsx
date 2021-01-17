@@ -9,7 +9,7 @@ export const Title = tw.h3`uppercase mt-1`;
 export const Description = tw.p`text-sm mt-1 mb-2`;
 export const Date = tw.p`absolute bottom-2 left-3`;
 export const DescWrapper = tw.div`p-3`;
-export const CardButton = tw.button`absolute border-none outline-none bottom-3 right-3 text-sm
+export const CardButton = tw.div`absolute border-none outline-none bottom-3 right-3 text-sm
 active:(outline-none)
 focus:(outline-none)
 hover:(cursor-pointer)

@@ -1,4 +1,8 @@
 const path = require(`path`)
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 
 module.exports = {
   siteMetadata: {
@@ -7,6 +11,13 @@ module.exports = {
     author: `Mateusz Szostek`
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
