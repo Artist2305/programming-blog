@@ -1,12 +1,13 @@
 import tw from 'twin.macro';
+import Img from 'gatsby-image';
 
-export const CardWrapper = tw.div`w-full h-80 shadow-lg relative 
+export const CardWrapper = tw.div`w-full h-80 shadow-lg rounded-md relative 
 sm:(mr-3 ml-3)
 md:(mr-0 ml-0)`;
-export const Image = tw.img`bg-gray-100 w-full h-32`;
-export const Tags = tw.span``;
-export const Title = tw.h3`uppercase mt-1`;
-export const Description = tw.p`text-sm mt-1 mb-2`;
+export const Image = tw.img`w-full h-32 rounded-md`;
+export const Tags = tw.span`font-semibold`;
+export const Title = tw.h3`uppercase mt-1 font-bold`;
+export const Description = tw.p`text-base mt-1 mb-2`;
 export const Date = tw.p`absolute bottom-2 left-3`;
 export const DescWrapper = tw.div`p-3`;
 export const CardButton = tw.div`absolute border-none outline-none bottom-3 right-3 text-sm

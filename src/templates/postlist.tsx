@@ -3,25 +3,21 @@ import Layout from '../components/Layout';
 import tw from 'twin.macro'
 import ContentCard from '../components/ContentCard';
 import { graphql } from 'gatsby';
-import { Link } from 'gatsby';
 import SectionTitle from '../components/SectionTitle';
-
+import Pager from '../components/Pager';
 
 export const ContentContainer = tw.section`grid sm:grid-cols-1 md:grid-cols-2 
 lg:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-2 mt-2 mb-8`;
-export const PaginationButton = tw(Link)`w-24 h-10 text-center pt-2 shadow-md m-1 outline-none duration-200
-hover:(cursor-pointer bg-gray-300)`;
 export const PaginationWrapper = tw.div`flex flex-row justify-center mb-10`;
-
 import Head from '../components/Head';
 
 export const query = graphql`
-query {
+query ($skip: Int!, $limit: Int!){
   allMarkdownRemark(
     sort: {fields: frontmatter___id, order: ASC}
     filter: {fileAbsolutePath: {regex: "/(data)/(posts)/"}}
-    skip: 0,
-    limit: 12
+    skip: $skip,
+    limit: $limit
   ) {
     edges {
       node {
@@ -44,23 +40,14 @@ query {
 }
 `
 
-const Home: React.FC = (props) => {
+const Postlist: React.FC = (props) => {
 
-  interface TestData {
-    id: number,
-    image: string,
-    tags: string,
-    title: string,
-    desc: string,
-    date: string,
-  }
 
   console.log(props);
 
-  const articles = props.data.allMarkdownRemark.edges
 
+  const articles = props.data.allMarkdownRemark.edges;
   return (
-
     <Layout>
       <Head title="Home Page" />
       <SectionTitle title='PROGRAMMING TUTORIALS' />
@@ -76,12 +63,13 @@ const Home: React.FC = (props) => {
             color={s.node.frontmatter.cardColor}
           />)
         }
+
       </ContentContainer>
       <PaginationWrapper>
-        {articles.length > 12 ? <PaginationButton to="/2">Next Page</PaginationButton> : <div></div>}
+        <Pager pageContext={props.pathContext} />
       </PaginationWrapper>
     </Layout>
   )
 }
 
-export default Home;
+export default Postlist;

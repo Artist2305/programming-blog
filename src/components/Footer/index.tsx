@@ -13,22 +13,17 @@ const Footer: React.FC = ({ }) => {
   }
 
   let testDataArticleLink: TestArticles[] = [
-    { id: 1, title: "Article", slug: "/article" },
-    { id: 2, title: "Lorem", slug: "/article" },
-    { id: 3, title: "Perlin Noise", slug: "/article" },
-    { id: 4, title: "Ipsum", slug: "/article" },
-    { id: 5, title: "Ipsumlorem", slug: "/article" },
+    { id: 1, title: "When should you use struct?", slug: "/when-should-you-use-struct-charp" },
+    { id: 2, title: "Why media queries run at wrong width?", slug: "/why-media-queries-run-at-wrong-width" },
+    { id: 3, title: "How to update all Node dependencies?", slug: "/how-to-update-all-node-dependencies" },
   ]
   let footerDatalinks: TestArticles[] = [
-    { id: 1, title: "Sitemap", slug: "/article" },
-    { id: 2, title: "Blog", slug: "/article" },
-    { id: 3, title: "Help", slug: "/article" },
-    { id: 4, title: "Privacy Policy", slug: "/article" },
-    { id: 5, title: "About", slug: "/article" },
-    { id: 6, title: "Cooperation", slug: "/article" },
-    { id: 7, title: "Contact", slug: "/article" },
-    { id: 8, title: "Terms Of Service", slug: "/article" },
-    { id: 9, title: "Disclosure", slug: "/article" },
+    { id: 1, title: "Home", slug: "/" },
+    { id: 2, title: "Help", slug: "/help" },
+    { id: 3, title: "Privacy Policy", slug: "/privacyPolicy" },
+    { id: 4, title: "About", slug: "/about" },
+    { id: 5, title: "Cooperation", slug: "/cooperation" },
+    { id: 6, title: "Contact", slug: "/contact" },
   ]
   let testArticlelinks = testDataArticleLink.map(s => <FooterLink key={s.id} to={s.slug}>{s.title}</FooterLink>);
   let footerLinks = footerDatalinks.map(s => <FooterLink key={s.id} to={s.slug}>{s.title}</FooterLink>);

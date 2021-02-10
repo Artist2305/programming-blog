@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './../../assets/styles/globalStyles';
 import "tailwindcss/tailwind.css";
 import "../../css/styles.css";
+import "../../css/customStyles.css";
 import * as Theme from './../../assets/styles/theme';
 import { LayoutWrapper, MainWrapper } from './styles';
 
@@ -11,7 +12,6 @@ import { uiSelector } from '../../state/ui';
 import store from '../../state/store';
 import { switchOffMenu } from '../../state/menuState';
 
-import SectionTitle from '../SectionTitle';
 import Navigation from '../Navigation';
 import Content from '../Content';
 import Footer from '../Footer';
@@ -43,7 +43,6 @@ const Layout: React.FC = ({ children }) => {
       <MainWrapper>
         <LayoutWrapper>
           <Navigation />
-          <SectionTitle title={store.getState().title.pageTitle} />
           <Content children={children} />
           <Footer />
         </LayoutWrapper>

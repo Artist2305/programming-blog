@@ -4,9 +4,11 @@ import Header from '../Header';
 import NavBar from '../NavBar';
 import SearchBox from '../SearchBox';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   NavContainer, SettingsBar, MobileItems,
-  MobileBtnImg, DesktopBar, SocialWrapper
+  MobileBtnImg, DesktopBar, SocialWrapper, AwesomeIcon
 } from './styles';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -35,16 +37,11 @@ const Navigation: React.FC = ({ }) => {
         <NavBar />
       </DesktopBar>
       <SettingsBar>
-        <SearchBox />
+
         <SocialWrapper menuState={menuState} >
-          <MobileBtnImg icon={'plug'}>
-          </MobileBtnImg>
-        </SocialWrapper>
-        <SocialWrapper>
-          <MobileBtnImg icon={'moon'} onClick={() => {
-            dispatch(toogleThemeMode());
-          }}>
-          </MobileBtnImg>
+          <a href="https://www.facebook.com/Code-Artist-103366008460353"><AwesomeIcon icon={['fab', 'facebook']}></AwesomeIcon></a>
+          <MobileBtnImg icon={'moon'} onClick={() => { dispatch(toogleThemeMode()); }}></MobileBtnImg>
+
         </SocialWrapper>
         <MobileItems onClick={() => { dispatch(toogleBtnIcon()); }}>
           <MobileBtnImg icon={menuState === 'open' ? 'times' : 'bars'}>

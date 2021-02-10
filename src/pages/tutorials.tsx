@@ -3,6 +3,7 @@ import tw from 'twin.macro'
 import Layout from '../components/Layout';
 import ContentCard from '../components/ContentCard';
 import Head from '../components/Head';
+import SectionTitle from '../components/SectionTitle';
 
 export const ContentContainer = tw.section`grid grid-cols-4 gap-x-2 gap-y-2 mt-8 mb-8`;
 
@@ -69,6 +70,7 @@ const Tutorials: React.FC = ({ children }) => {
   return (
     <Layout>
       <Head title="Tutorials" />
+      <SectionTitle title='PROGRAMMING TUTORIALS' />
       <ContentContainer>
         {testCards}
         {children}

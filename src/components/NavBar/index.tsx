@@ -22,24 +22,12 @@ const NavBar: React.FC = ({ }) => {
     },
     {
       id: 1,
-      title: 'Tutorials',
-      slug: '/tutorials',
-      action: 'TUTORIALS'
+      title: 'About',
+      slug: '/about',
+      action: 'ABOUT'
     },
     {
-      id: 3,
-      title: 'How To',
-      slug: '/howto',
-      action: 'HOWTO'
-    },
-    {
-      id: 4,
-      title: 'Articles',
-      slug: '/articles',
-      action: 'ARTICLES'
-    },
-    {
-      id: 6,
+      id: 2,
       title: 'Contact',
       slug: '/contact',
       action: 'CONTACT'
