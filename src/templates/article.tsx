@@ -20,13 +20,6 @@ query ($slug: String) {
       author
       date
       description
-      featuredImage {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       cardColor
       id
       slug
