@@ -16,6 +16,12 @@ export default createGlobalStyle<{ theme: ThemeType }>`
     text-decoration: none;
     font-weight: 600;
   }
+  p, ul, li {
+    font-size: 1rem;
+  }
+  h4 {
+    line-height: 40px;
+  }
   input {
     color: ${({ theme }) => theme.colors.primary};
     font-size: 1rem;

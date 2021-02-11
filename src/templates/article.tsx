@@ -7,8 +7,8 @@ import tw from 'twin.macro';
 
 import SectionTitle from '../components/SectionTitle';
 const ContentDivider = tw.div`grid grid-cols-12`;
-const Content = tw.div`lg:col-span-9 md:col-span-12 px-16 pt-2`;
-const Aside = tw.div`lg:col-span-3 md:col-span-12 m-2`;
+const Content = tw.div`lg:col-span-9 md:col-span-12 col-span-12 md:px-16 pt-2`;
+const Aside = tw.div`lg:col-span-3 md:col-span-12 col-span-12 m-2`;
 const ArticleTitle = tw.h1`text-5xl font-bold pt-7 pb-3 text-center`;
 const Author = tw.p`text-center text-gray-500 italic pb-7`;
 const CardWrapper = tw.div`mb-10`;
@@ -84,7 +84,7 @@ const Article: React.FC = (props) => {
       <SectionTitle title='' />
       <ContentDivider>
         <Content>
-          <img src={featuredImage} className="w-full h-96 " style={styledImg} />
+          <img src={featuredImage} className="w-full lg:h-96 " style={styledImg} />
           <ArticleTitle>{props.data.markdownRemark.frontmatter.title}</ArticleTitle>
           <Author>By {props.data.markdownRemark.frontmatter.author} on {props.data.markdownRemark.frontmatter.date}</Author>
           <div
