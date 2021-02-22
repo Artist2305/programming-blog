@@ -1,7 +1,7 @@
 <p align="center">
-  <img width="200" src="" alt="SquareLine Transport">
+  <img width="200" src="https://user-images.githubusercontent.com/51017386/107850490-c1773a00-6dfa-11eb-968b-8683b5b84485.png" alt="Code Artist">
 </p>
-<h1 align = "center" >SquareLine Transport</h1>
+<h1 align = "center" >Code Artist</h1>
 <p align = "center" > My blog where I publish articles about programming, tips on how to solve common programming problems and simple tools for developers. </p>
 
 # Getting Started
@@ -18,7 +18,6 @@ Open project in editor and then run in command console:
 # About Project
 ### Features
 The website has the following features:
-{
 - responsive design
 - logo
 - pagination and automatic generation of blog subpages
