@@ -2,10 +2,10 @@
 id: "0004"
 slug:  "how-to-add-and access-env-in-React"
 title: "How to add and access .env in React?"
-keywords: "programming, tips, tutorial, variable, env, environmental, react, javascript, js, access, add, how, to "
+keywords: "programming, tips, tutorial, variable, env, environmental, react, javascript, js, access, add, how, to"
 shortDesc: "Short tip how to manage environmental variable"
 tags: "React"
-description: "This awesome post description"
+description: "Learn how create and use environmental variables. Tutorial about how to manage environmental variables."
 date: "22 Feb 2021"
 postImage: ../posts/post_4.svg
 featuredImage: ../posts/dragonball.jpg

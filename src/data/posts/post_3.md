@@ -5,7 +5,7 @@ title: "How to update all Node dependencies?"
 keywords: "programming, tips, tutorial, node, js, dependencies, update, versions"
 shortDesc: "Are your dependecies out of date? There is a simple way to safetly update all."
 tags: "Node.js"
-description: "This awesome post description"
+description: "Learn step by step how to update all dependencies. Simple way to update all Node.js dependencies."
 date: "03 February 2021"
 postImage: ../posts/post_3.svg
 featuredImage: ../posts/dragonball.jpg

@@ -5,7 +5,7 @@ title: "When should you use struct?"
 keywords: "struct, c#, class, programming, tips, tutorial, memory"
 shortDesc: "Struct and class. How the memory is allocated?"
 tags: "C# .NET .NET Core"
-description: "This awesome post description"
+description: "Learn when you should use class and struct in C# language. How the memory is alocated and differences between class and struct."
 date: "02 January 2021"
 postImage: ../posts/post_1.svg
 featuredImage: ../posts/dragonball.jpg

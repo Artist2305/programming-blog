@@ -22,6 +22,7 @@ query ($slug: String) {
       description
       cardColor
       id
+      keywords
       slug
       title
       firstRelatedTopic
@@ -73,7 +74,7 @@ const Article: React.FC = (props) => {
     backgroundColor: backgroundColor,
   }
 
-  console.log(relatedArticles);
+  console.log(props.data.markdownRemark.frontmatter.keywords);
   let featuredImage = props.data.markdownRemark.frontmatter.postImage.publicURL;
   return (
     <Layout>

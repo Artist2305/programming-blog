@@ -26,15 +26,16 @@ const Head: React.FC<HeadProps> = (props) => {
   `)
 
   return (
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{props.title + ' | ' + data.site.siteMetadata.title}</title>
-        <meta name = "keywords" content={props.keywords}/>
-        <meta name = "author" content={props.author}/>
-        <base href = "adres strony" target="_blank"/>
-        <meta name = "description" content={props.description}/>
-        <meta name = "robots" content="index, follow" />
-      </Helmet>
+
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>{props.title + ' | ' + data.site.siteMetadata.title}</title>
+      <meta name="keywords" content={props.keywords} />
+      <meta name="author" content={props.author} />
+      <base href="https://www.code-artist.com/" target="_blank" />
+      <meta name="description" content={props.description} />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
   )
 }
 
