@@ -2,7 +2,7 @@
 id: "0002"
 slug:  "why-media-queries-run-at-wrong-width"
 title: "Why media queries run at wrong width?"
-keywords: "css, responsiveness, media, query, scss, screen, width, height, programming, tips, tutorial"
+keywords: "css, responsiveness, media query, creen, width"
 shortDesc: "Web developer problem. The solution is simpler than it sounds."
 tags: "Css, Web Development"
 description: "Why media queries run at wrong width. Problem with width and height of browser."

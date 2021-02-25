@@ -69,7 +69,11 @@ const Articles: React.FC = ({ children }) => {
 
   return (
     <Layout>
-      <Head title="Articles" />
+      <Head title="Articles"
+        description="See all tutorials and articles at Code Artist to learn about programming."
+        keywords="programming, tutorial, blog, learn, Code Artist"
+        author="Mateusz Szostek"
+      />
       <SectionTitle title='ARTICLES' />
       <ContentContainer>
         {testCards}

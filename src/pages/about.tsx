@@ -10,7 +10,11 @@ export const Paragraf = tw.section`my-2`;
 
 const About: React.FC = () =>
   <Layout>
-    <Head title="About" />
+    <Head title="About"
+      description="I'm Mateusz Szostek. Welcome on Code-Artist - site about programming."
+      keywords="about, Mateusz Szostek, Code Artist, blog, programming"
+      author="Mateusz Szostek"
+    />
     <SectionTitle title='ABOUT ME' />
     <Container>
       <Paragraf> Hi, I'm Mateusz Szostek, I'm a self-taught programmer. I am 30 years old and I come from Poland. </Paragraf>

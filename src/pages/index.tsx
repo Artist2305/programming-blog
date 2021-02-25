@@ -64,7 +64,7 @@ const Home: React.FC = (props) => {
     <Layout>
       <Head title="Home Page"
         description="Do you like programming? This is the place for you. Learn everything about programming."
-        keywords="programming, tutorial, blog, learn, how, to, code, artist, code-artist, code artist, "
+        keywords="programming, tutorial, blog, learn, code artist, "
         author="Mateusz Szostek"
       />
       <SectionTitle title='PROGRAMMING TUTORIALS' />

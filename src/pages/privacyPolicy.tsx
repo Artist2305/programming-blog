@@ -9,7 +9,11 @@ export const Paragraf = tw.section`my-2`;
 
 const PrivacyPolicy: React.FC = () =>
   <Layout>
-    <Head title="Privacy Policy" />
+    <Head title="Home Page"
+      description="Privacy policy of programming blog Code Artist"
+      keywords="programming, tutorial, blog, privacy policy, code artist, "
+      author="Mateusz Szostek"
+    />
     <SectionTitle title='PRIVACY POLICY' />
     <Wrapper>
       <h4>Privacy Policy</h4>

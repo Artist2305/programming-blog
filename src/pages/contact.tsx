@@ -7,7 +7,11 @@ import SectionTitle from '../components/SectionTitle';
 const Contact: React.FC = () => {
   return (
     <Layout>
-      <Head title="Contact" />
+      <Head title="Contact"
+        description="Feel free to contact me by email address."
+        keywords="address, email, Mateusz Szostek, contact, Code Artist"
+        author="Mateusz Szostek"
+      />
       <SectionTitle title='CONTACT' />
       <ContactForm></ContactForm>
     </Layout>

@@ -2,7 +2,7 @@
 id: "0004"
 slug:  "how-to-add-and access-env-in-React"
 title: "How to add and access .env in React?"
-keywords: "programming, tips, tutorial, variable, env, environmental, react, javascript, js, access, add, how, to"
+keywords: "variable, environmental, react, access, create"
 shortDesc: "Short tip how to manage environmental variable"
 tags: "React"
 description: "Learn how create and use environmental variables. Tutorial about how to manage environmental variables."
@@ -54,7 +54,7 @@ At the very end, don't forget to add .env to your .gitignore file so that they n
 ---
 ---
 
-#### How to create environmental variables in React app.
+#### How to use enviromental variables?
 
 ---
 To use environment variables, use the *process* variable. How to do this is shown in the example below:

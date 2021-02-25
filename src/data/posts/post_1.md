@@ -2,7 +2,7 @@
 id: "0001"
 slug:  "when-should-you-use-struct-charp"
 title: "When should you use struct?"
-keywords: "struct, c#, class, programming, tips, tutorial, memory"
+keywords: "struct, c#, class, tutorial, memory"
 shortDesc: "Struct and class. How the memory is allocated?"
 tags: "C# .NET .NET Core"
 description: "Learn when you should use class and struct in C# language. How the memory is alocated and differences between class and struct."
@@ -17,7 +17,7 @@ thirdRelatedTopic: "0"
 
 ---
 
-During your adventure with the C # programming language you will come across the concepts of class and struct. Perhaps it's not entirely clear when you should use struct instead of class. Good understanding of the differences in the behavior of reference types and value types is crucial in making this choice. Today I will try to explain it.
+During your adventure with the C# programming language you will come across the concepts of class and struct. Perhaps it's not entirely clear when you should use struct instead of class. Good understanding of the differences in the behavior of reference types and value types is crucial in making this choice. Today I will try to explain it.
 
 ---
 In this article you will read about:

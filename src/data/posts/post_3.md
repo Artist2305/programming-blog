@@ -2,7 +2,7 @@
 id: "0003"
 slug:  "how-to-update-all-node-dependencies"
 title: "How to update all Node dependencies?"
-keywords: "programming, tips, tutorial, node, js, dependencies, update, versions"
+keywords: "node, dependencies, update, versions, "
 shortDesc: "Are your dependecies out of date? There is a simple way to safetly update all."
 tags: "Node.js"
 description: "Learn step by step how to update all dependencies. Simple way to update all Node.js dependencies."
